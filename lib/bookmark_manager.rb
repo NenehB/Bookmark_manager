@@ -3,9 +3,8 @@ class BookMarkManager
   
   def self.all
     result = DatabaseConnection.query("SELECT url FROM bookmarks")
-    p result
     result.map do |res|
-      p res
+      res["url"]
     end 
   end
 

@@ -7,7 +7,7 @@ feature 'See list of bookmarks' do
   end
   scenario 'viewing bookmarks' do
     visit('/bookmarks')
-    bookmarks = %w[google amazon wikipedia]
+    bookmarks = %w[ http://www.makersacademy.com/ http://www.destroyallsoftware.com http://www.google.com ]
     bookmarks.each do |bookmark|
       expect(page).to have_content bookmark
     end

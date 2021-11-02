@@ -12,7 +12,8 @@ class BookMark < Sinatra::Base
   end
 
   get '/bookmarks' do
-    p @bookmarks = BookMarkManager.all
+    bookmark_list = BookMarkManager.all
+    @bookmarks_formatted = bookmark_list.join('<br>')
     erb :index
   end
 
