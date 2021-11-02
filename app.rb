@@ -6,14 +6,14 @@ class BookMark < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
-  get '/' do 
+  get '/' do
     'Welcome'
-  end 
+  end
 
-  get '/bookmarks' do 
+  get '/bookmarks' do
     @bookmarks = BookMarkManager.all
-    erb :index 
-  end 
+    erb :index
+  end
 
- run! if app_file == $0
+  run! if app_file == $PROGRAM_NAME
 end

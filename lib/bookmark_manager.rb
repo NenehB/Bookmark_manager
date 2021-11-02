@@ -1,7 +1,5 @@
 class BookMarkManager
-
-def self.all
- ["google", "amazon", "wikipedia"]
-end 
-
-end 
+  def self.all
+    %w[google amazon wikipedia]
+  end
+end
