@@ -6,4 +6,11 @@ feature 'See list of bookmarks' do
        visit ('/')
         expect(page).to have_content "Welcome"
     end 
+    scenario 'viewing bookmarks' do 
+      visit ('/bookmarks')
+      bookmarks = ["google", "amazon", "wikipedia"]
+      bookmarks.each do |bookmark|
+        expect(page).to have_content bookmark
+      end
+    end 
 end 

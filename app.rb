@@ -8,6 +8,9 @@ class BookMark < Sinatra::Base
   get '/' do 
     'Welcome'
   end 
-  
+
+  get '/bookmarks' do 
+  erb :index 
+  end 
  run! if app_file == $0
 end
