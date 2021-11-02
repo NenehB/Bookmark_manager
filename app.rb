@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require_relative './lib/bookmark_manager'
+require './database_connection_setup'
 
 class BookMark < Sinatra::Base
   configure :development do
@@ -11,7 +12,7 @@ class BookMark < Sinatra::Base
   end
 
   get '/bookmarks' do
-    @bookmarks = BookMarkManager.all
+    p @bookmarks = BookMarkManager.all
     erb :index
   end
 
